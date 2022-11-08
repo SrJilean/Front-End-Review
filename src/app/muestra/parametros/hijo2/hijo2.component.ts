@@ -11,6 +11,7 @@ export class Hijo2Component {
 
   @Input() public textoHijo1: string = '';
   @Input() public textoHijo2: string = '';
+
   get textoHijo3(){
     return this.service.textoHijo3;
   }

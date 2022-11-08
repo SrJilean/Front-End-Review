@@ -15,7 +15,9 @@ export class Hijo1Component{
   textoHijo2: string = '';
   textoHijo3: string = '';
 
-  constructor(private service: ServiceMuestraService) { }
+  constructor(
+    private service: ServiceMuestraService
+    ) { }
 
   enviarMensaje(){
     this.enviar.emit(this.textoHijo1);

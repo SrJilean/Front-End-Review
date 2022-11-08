@@ -11,7 +11,9 @@ export class ServiceMuestraService {
     return this._textoHijo3;
   }
 
-  constructor() { }
+  constructor() {
+    console.log('Hola desde el servicio')
+   }
 
   public setTextoHijo(mensaje: string): void{
     this._textoHijo3 = mensaje;

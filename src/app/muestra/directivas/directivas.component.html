@@ -1,0 +1,34 @@
+<h1> Directivas </h1>
+<hr>
+<h4>¿Quieres desplegar los campos?</h4>
+<select [(ngModel)]="directiva" class="form-control-lg" #select>
+  <option value="false">No</option>
+  <option value="true">Si</option>
+</select>
+
+<div class="container" *ngIf="directiva === 'true'">
+  <br>
+  <input type="number" class="form-control-lg" [(ngModel)]="cantidad">
+
+  <!-- <h5>{{cantidad}}</h5> -->
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Validez</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of [].constructor(cantidad); let i = index" [ngSwitch]="validar(i)">
+        <td>{{i+1}}</td>
+        <td><input type="text" placeholder="Nombre..."></td>
+        <td><input type="text" placeholder="Correo..." [(ngModel)]="correo[i]"></td>
+        <td *ngSwitchCase="'valido'"><img class="h-auto d-inline-block" src="../../../assets/images/check.png"></td>
+        <td *ngSwitchCase="'noValido'"><img class="h-auto d-inline-block" src="../../../assets/images/uncheck.png"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

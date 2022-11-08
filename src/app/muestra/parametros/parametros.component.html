@@ -1,0 +1,11 @@
+<div class="row">
+  <button class="btn btn-primary" (click)="recibirMensaje2()">Reload</button>
+  <div class="col">
+    <h1>Hijo 1</h1>
+    <app-hijo1 (enviar)="recibirMensaje1($event)"></app-hijo1>
+  </div>
+  <div class="col">
+    <h1>Hijo 2</h1>
+    <app-hijo2 [textoHijo1]="textoHijo1" [textoHijo2]="textoHijo2"></app-hijo2>
+  </div>
+</div>

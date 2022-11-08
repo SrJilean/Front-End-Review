@@ -1,6 +1,5 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { combineLatest } from 'rxjs';
 import { MainComponent } from './muestra/main/main.component';
 import { DirectivasComponent } from './muestra/directivas/directivas.component';
 import { ParametrosComponent } from './muestra/parametros/parametros.component';
